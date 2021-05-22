@@ -27,7 +27,7 @@
 						username: name,
 						password: pwd
 					}
-				Bmob.User.register(params).then(res => {
+				Bmob.User.register(document.getElementById("username").value,document.getElementById("pwd").value).then(res => {
 				  location.href = "login.html";
 				}).catch(err => {
 					alert(name+pwd+err.code+err.error);
