@@ -32,7 +32,7 @@
 				Bmob.User.register(params).then(res => {
 				  location.href = "login.html";
 				}).catch(err => {
-					console.log(name+pwd+err);
+					alert(name+pwd+err.code+err.error);
 				});
 			}else{
 				alert("用户名或密码不能为空")
