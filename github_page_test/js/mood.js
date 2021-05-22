@@ -1,5 +1,5 @@
 <script>
-			Bmob.initializa("42703225079892d4", "786886");
+			Bmob.initialize("42703225079892d4", "786886");
 			Bmob.debug(true);
 			function loaddata(){
 				const query = Bmob.Query("article");

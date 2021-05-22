@@ -15,7 +15,7 @@
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<script>
-		Bmob.initializa("42703225079892d4", "7868861");
+		Bmob.initialize("42703225079892d4", "786886");
 		Bmob.debug(true);
 		function register(){
 			let name = document.getElementById("username").value;
@@ -24,15 +24,13 @@
 			let pho="456";
 			if(name!=""&&pwd!=""){
 				let params = {
-    username: 'bmob2018',
-    password: 'bmob2018',
-    email: 'bmob2018@bmob.cn',
-    phone: '13711166567',
-}
+						username: name,
+						password: pwd
+					}
 				Bmob.User.register(params).then(res => {
 				  location.href = "login.html";
 				}).catch(err => {
-					console.log(name+pwd+err);
+					alert(name+pwd+err.code+err.error);
 				});
 			}else{
 				alert("用户名或密码不能为空")
